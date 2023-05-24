@@ -19,7 +19,11 @@ QWT_OUT_ROOT = $${OUT_PWD}/..
 TEMPLATE          = lib
 TARGET            = $$qwtLibraryTarget(qwt)
 
-DESTDIR           = $${QWT_OUT_ROOT}/lib
+contains(QT_ARCH, i386) {
+    DESTDIR       = $${QWT_OUT_ROOT}/../x86
+} else {
+    DESTDIR       = $${QWT_OUT_ROOT}/../x64
+}
 
 contains(QWT_CONFIG, QwtDll) {
 

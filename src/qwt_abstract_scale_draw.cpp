@@ -57,7 +57,9 @@ class QwtAbstractScaleDraw::PrivateData
    The spacing (distance between ticks and labels) is
    set to 4, the tick lengths are set to 4,6 and 8 pixels
  */
-QwtAbstractScaleDraw::QwtAbstractScaleDraw()
+QwtAbstractScaleDraw::QwtAbstractScaleDraw() :
+_prefix(""),
+_suffix("")
 {
     m_data = new QwtAbstractScaleDraw::PrivateData;
 }
@@ -374,7 +376,12 @@ double QwtAbstractScaleDraw::maxTickLength() const
  */
 QwtText QwtAbstractScaleDraw::label( double value ) const
 {
-    return QLocale().toString( value );
+    // only show the pre/suffix for the original label
+    double lowerBound = m_data->scaleDiv.lowerBound();
+    if( value == lowerBound )
+        return _prefix + QLocale().toString(value) + _suffix;
+    else
+        return QLocale().toString(value);
 }
 
 /*!

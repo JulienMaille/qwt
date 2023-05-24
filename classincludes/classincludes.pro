@@ -130,6 +130,7 @@ contains(QWT_CONFIG, QwtPlot) {
         QwtPlotSpectrogram \
         QwtPlotTextLabel \
         QwtPlotTradingCurve \
+        QwtPlotPiecewiseCurve \
         QwtPlotVectorField \
         QwtPlotZoneItem \
         QwtPlotZoomer \

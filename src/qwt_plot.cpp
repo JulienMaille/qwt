@@ -517,6 +517,7 @@ QSize QwtPlot::sizeHint() const
  */
 QSize QwtPlot::minimumSizeHint() const
 {
+    return QSize(0, 0); // minimumSizeHint is broken, returning 0 works better
     QSize hint = m_data->layout->minimumSizeHint( this );
     hint += QSize( 2 * frameWidth(), 2 * frameWidth() );
 

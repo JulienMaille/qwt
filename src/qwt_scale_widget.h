@@ -61,6 +61,8 @@ class QWT_EXPORT QwtScaleWidget : public QWidget
     void setTitle( const QwtText& title );
     QwtText title() const;
 
+    void setPrefix(const QString & s);
+    void setSuffix(const QString & s);
     void setLayoutFlag( LayoutFlag, bool on );
     bool testLayoutFlag( LayoutFlag ) const;
 

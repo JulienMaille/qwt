@@ -128,6 +128,7 @@ contains(QWT_CONFIG, QwtPlot) {
         qwt_plot_multi_barchart.h \
         qwt_plot_intervalcurve.h \
         qwt_plot_tradingcurve.h \
+        qwt_plot_piecewise_curve.h \
         qwt_plot_layout.h \
         qwt_plot_marker.h \
         qwt_plot_zoneitem.h \
@@ -182,6 +183,7 @@ contains(QWT_CONFIG, QwtPlot) {
         qwt_plot_intervalcurve.cpp \
         qwt_plot_zoneitem.cpp \
         qwt_plot_tradingcurve.cpp \
+        qwt_plot_piecewise_curve.cpp \
         qwt_plot_spectrogram.cpp \
         qwt_plot_spectrocurve.cpp \
         qwt_plot_scaleitem.cpp \

@@ -77,6 +77,9 @@ class QWT_EXPORT QwtAbstractScaleDraw
 
     virtual QwtText label( double ) const;
 
+    void setPrefix(const QString& s) { _prefix = s; }
+    void setSuffix(const QString& s) { _suffix = s; }
+
     /*!
        Calculate the extent
 
@@ -133,6 +136,8 @@ class QWT_EXPORT QwtAbstractScaleDraw
 
     class PrivateData;
     PrivateData* m_data;
+
+    QString _prefix, _suffix;
 };
 
 Q_DECLARE_OPERATORS_FOR_FLAGS( QwtAbstractScaleDraw::ScaleComponents )

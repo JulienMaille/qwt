@@ -3,10 +3,14 @@ Makefile
 obj
 moc
 rcc
-lib
 bin
 html
 plugins
 resources
 Doxygen.log
 *.swp
+*.sln
+src/debug
+src/release
+*.vcxproj
+src/qwt.vcxproj.filters

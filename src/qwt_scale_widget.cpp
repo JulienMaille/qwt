@@ -178,6 +178,18 @@ void QwtScaleWidget::setTitle( const QString& title )
     }
 }
 
+void QwtScaleWidget::setPrefix(const QString & s)
+{
+    if ( m_data->scaleDraw )
+        m_data->scaleDraw->setPrefix(s);
+}
+
+void QwtScaleWidget::setSuffix(const QString & s)
+{
+    if ( m_data->scaleDraw )
+        m_data->scaleDraw->setSuffix(s);
+}
+
 /*!
    Give title new text contents
 
